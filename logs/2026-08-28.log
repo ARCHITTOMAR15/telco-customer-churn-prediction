@@ -1,2 +1,4 @@
 [ 2026-08-28 16:51:06,975 ] INFO - Project initialized successfully.
 [ 2026-08-28 16:51:06,977 ] INFO - Logger is working correctly.
+[ 2026-08-28 20:02:08,993 ] ERROR - No such comm target registered: jupyter.widget.control
+[ 2026-08-28 20:02:09,005 ] WARNING - No such comm: 3e1d0bbb-597f-448a-97d7-9a9751801ead
