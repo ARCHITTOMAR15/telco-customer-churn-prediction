@@ -1,7 +1,7 @@
 data:
-  raw_data_path= data\raw\WA_Fn-UseC_-Telco-Customer-Churn.csv
-  interim_data_path=data\interim 
-  processed_data_path=data\processed 
+  raw_data_path: data/raw/WA_Fn-UseC_-Telco-Customer-Churn.csv
+  interim_data_path: data/interim 
+  processed_data_path: data/processed 
 
 artifacts:
   model_path: artifacts/models/model.pkl

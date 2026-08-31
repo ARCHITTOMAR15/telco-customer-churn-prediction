@@ -15,7 +15,7 @@ def read_yaml(file_path):
           config=yaml.safe_load(yaml_file)
         logger.info("YAML file loaded successfully.")
         return config
-    except Exception as e:
+    except Exception as e :
         logger.error("Failed to read YAML file.")
         raise CustomException(e, sys)
 
@@ -23,23 +23,24 @@ def read_yaml(file_path):
 def create_directories(paths):
     try:
         for path in paths:
-          os.makedirs(path,exist_ok=True)
-          logger.info(f"Directory Created:{path}")
+           os.makedirs(path,exist_ok=True)
+           logger.info(f"Directory Created:{path}")
     except Exception as e:
         raise CustomException(e, sys)
 
 ## Function 3 for Save Objects 
 
-def save_object(file_path, obj):
+def save_object(file_path,obj):
     try:
-        directory = os.path.dirname(file_path)
-        os.makedirs(directory, exist_ok=True)
+        directory=os.path.dirname(file_path)
+        os.makedirs(directory,exist_ok=True)
 
-        joblib.dump(obj, file_path)
+        joblib.dump(obj,file_path)
         logger.info(f"Object saved at: {file_path}")
 
     except Exception as e:
         raise CustomException(e, sys)
+
 ## function 4 load object s
 
 def load_object(file_path):
