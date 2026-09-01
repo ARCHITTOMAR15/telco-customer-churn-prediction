@@ -25,11 +25,14 @@ class DataIngestion:
 
     @staticmethod
     def dataset_summary(df):
-        summary=pd.DataFrame({"Data Types":df.types,"Missing Values":df.isnull().sum(),
-        "Missing Percentage":(df.isnull().sum()/len(df)*100).round(2),
-        "Unique Values":df.nunique()})
+      summary = pd.DataFrame({
+        "Data Types": df.dtypes,
+        "Missing Values": df.isnull().sum(),
+        "Missing Percentage": (df.isnull().sum() / len(df) * 100).round(2),
+        "Unique Values": df.nunique()
+    })
 
-        return summary
+      return summary
 
     @staticmethod
     def feature_types(df):
@@ -41,8 +44,8 @@ class DataIngestion:
     @staticmethod
 
     def target_summary(df,target_column):
-        summary=pd.DataFrame({"Count":df["target_column"].value_counts(),
-                              "Percentage":(df["target_column"].value_counts(normalize=True)*100).round(2)})
+        summary=pd.DataFrame({"Count":df[target_column].value_counts(),
+                              "Percentage":(df[target_column].value_counts(normalize=True)*100).round(2)})
         return summary
 
 
