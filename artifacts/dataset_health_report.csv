@@ -1,0 +1,9 @@
+Metric,Value
+Total Records,7043
+Total Features,24
+Categorical Features,17
+Numerical Features,7
+Duplicate Records,0
+Missing Values (TotalCharges),11
+Target Classes,2
+Class Distribution,73.46% No | 26.54% Yes

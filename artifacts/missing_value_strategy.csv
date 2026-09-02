@@ -1,0 +1,2 @@
+Feature,Missing Values,Reason,Treatment
+TotalCharges,11,Customers with zero tenure have blank TotalCharges.,Impute using median after preprocessing.

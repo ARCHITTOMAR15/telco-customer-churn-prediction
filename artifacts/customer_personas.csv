@@ -1,0 +1,6 @@
+Persona,Characteristics,Expected Churn Risk
+New Customer,Tenure less than 12 months,High
+Loyal Customer,Tenure greater than 48 months,Low
+Premium Customer,High Monthly Charges,Medium-High
+Family Customer,Partner + Dependents,Low
+Price Sensitive Customer,Month-to-Month + Electronic Check,High

@@ -1,0 +1,4 @@
+Feature Type,Encoding Method
+Binary Features,Label Encoding
+Nominal Features,One-Hot Encoding
+Target Variable,Label Encoding (Yes/No = 1/0)
