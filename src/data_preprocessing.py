@@ -92,7 +92,7 @@ class DataPreprocessing:
 
             #seprate features and Target columns 
 
-            if "CustomerID" in df.columns:
+            if "customerID" in df.columns:
                 df = df.drop(columns=["customerID"])
 
             X= df.drop(columns=["Churn"],axis=1)
@@ -113,15 +113,17 @@ class DataPreprocessing:
             logging.info("Data Preprocessing Completed")
 
              # Combine Features and Target
-            train_arr = np.c_[
-                X_train_processed,
-                np.array(y_train)
-            ]
+            feature_names = preprocessing_obj.get_feature_names_out().tolist()
 
-            test_arr = np.c_[
-                X_test_processed,
-                np.array(y_test)
-            ]
+            train_df = pd.DataFrame(
+                      X_train_processed,
+                     columns=feature_names)
+
+            train_df["Churn"] = y_train.values
+
+            test_df = pd.DataFrame(X_test_processed,columns=feature_names)
+
+            test_df["Churn"] = y_test.values
 
             # Create output folder
             os.makedirs(
@@ -139,24 +141,20 @@ class DataPreprocessing:
 
             logging.info("Preprocessor saved successfully.")
 
+            # Save feature names for explainability and prediction pipeline
+            save_object(file_path=os.path.join("artifacts", "feature_names_1.pkl"),obj=feature_names)
+
+            logging.info("Feature names saved successfully.")
+
             # Save processed datasets
-            pd.DataFrame(train_arr).to_csv(
-                self.config.train_data_path,
-                index=False
-            )
 
-            pd.DataFrame(test_arr).to_csv(
-                self.config.test_data_path,
-                index=False
-            )
 
+            train_df.to_csv(self.config.train_data_path,index=False)
+
+            test_df.to_csv(self.config.test_data_path,index=False)
             logging.info("Processed train and test datasets saved.")
 
-            return (
-                train_arr,
-                test_arr,
-                self.config.preprocessor_obj_file_path
-            )
+            return (train_df,test_df,self.config.preprocessor_obj_file_path)
 
         except Exception as e:
             raise CustomException(e, sys)

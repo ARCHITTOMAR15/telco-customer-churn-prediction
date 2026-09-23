@@ -38,7 +38,7 @@ class FeatureEngineering:
             df["AvgMonthlySpend"]=(df["TotalCharges"]/df["tenure"].replace(0,np.nan))
             df["AvgMonthlySpend"] = (df["AvgMonthlySpend"].fillna(df["MonthlyCharges"]))
 
-            df["IsLongTermCustomer"]=(df["tenure"]=>24).astype(int)
+            df["IsLongTermCustomer"]=(df["tenure"]>=24).astype(int)
             df["HasStreamingServices"]=((df["StreamingTV"]=="Yes")|(df["StreamingMovies"] == "Yes")).astype(int)
             df["HasSecurityServices"] = ((df["OnlineSecurity"] == "Yes") |(df["TechSupport"] == "Yes")).astype(int)
             df["HasFamily"] = ((df["Partner"] == "Yes") |(df["Dependents"] == "Yes")).astype(int)
@@ -84,38 +84,6 @@ class FeatureEngineering:
             return df
 
 
-       except Exception as e:
+        except Exception as e:
             raise CustomException(e, sys)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
