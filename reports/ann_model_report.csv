@@ -1,0 +1,2 @@
+Model,Accuracy,Precision,Recall,F1 Score,ROC AUC,Training Time (Seconds)
+ANN,0.7587,0.532,0.7567,0.6247,0.8245,76.33
