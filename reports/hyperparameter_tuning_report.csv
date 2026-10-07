@@ -1,0 +1,2 @@
+Model1,Accuracy,precision,recall,f1_score,roc_auc,CV ROC AUC,Tuning Time (Seconds),Best Parameters,,,,,,,
+Catboost Tuned,0.78,0.5874,0.5749,0.5811,0.8258,0.9409,215.5,"{'random_strength': 2, 'learning_rate': 0.1, 'l2_leaf_reg': 3, 'iterations': 200, 'depth': 8}",,,,,,,
