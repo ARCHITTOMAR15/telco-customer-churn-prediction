@@ -546,9 +546,14 @@ def predict_customer(
         customer_data
     )
 
-    transformed_data = preprocessor.transform(
-        engineered_data
-    )
+    import traceback
+
+    try:
+       transformed_data = preprocessor.transform(engineered_data)
+    except Exception:
+       print("Preprocessing failed:")
+       traceback.print_exc()
+       raise
 
     if hasattr(
         preprocessor,
