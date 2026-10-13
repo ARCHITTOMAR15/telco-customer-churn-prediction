@@ -2,6 +2,16 @@
 
 A machine learning web application that predicts customer churn risk using a trained CatBoost model. The app is built with Streamlit and provides churn probability, risk insights, and customer retention suggestions.
 
+# Telco Customer Churn Prediction
+
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Streamlit-red?logo=streamlit)](https://telco-customer-churn-prediction-ghuq4p56fs2bnhyogm3xw4.streamlit.app/)
+
+A machine learning application that predicts customer churn risk using CatBoost and Streamlit.
+
+
+A machine learning application that predicts customer churn risk using CatBoost and Streamlit.
+
+
 ## Features
 
 - Predict customer churn probability
@@ -18,33 +28,10 @@ A machine learning web application that predicts customer churn risk using a tra
 - CatBoost
 - Joblib
 
-## Run Locally
-
-1. Clone or download this repository.
-2. Install the dependencies:
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. Start the app:
-
-   ```bash
-   streamlit run app.py
-   ```
-
-## Required Artifacts
-
-Ensure these files are present in the project:
-
-- `artifacts/preprocessor.pkl`
-- `artifacts/selected_features.pkl`
-- `artifacts/models/CatBoost.pkl`
-
 ## Model
 
 The app uses a trained CatBoost classifier. Reported baseline test ROC AUC: **0.8369**. Model performance may vary if the model, data, or preprocessing pipeline changes.
 
-## Author
+## Created By 
 
 Archit Tomar
