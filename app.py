@@ -78,7 +78,7 @@ st.markdown(
         font-weight: 850;
         line-height: 1.2;
         color: #10245e;
-        padding: 0.4rem 0 0.2rem 0;
+        padding: 1.5rem 0 0.2rem 0;
     }
 
     .hero-subtitle {
