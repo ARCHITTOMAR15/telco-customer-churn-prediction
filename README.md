@@ -2,15 +2,11 @@
 
 A machine learning web application that predicts customer churn risk using a trained CatBoost model. The app is built with Streamlit and provides churn probability, risk insights, and customer retention suggestions.
 
-# Telco Customer Churn Prediction
+# Telco Customer Churn Prediction (Click The Link Below )
 
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-Streamlit-red?logo=streamlit)](https://telco-customer-churn-prediction-ghuq4p56fs2bnhyogm3xw4.streamlit.app/)
 
 A machine learning application that predicts customer churn risk using CatBoost and Streamlit.
-
-
-A machine learning application that predicts customer churn risk using CatBoost and Streamlit.
-
 
 ## Features
 
